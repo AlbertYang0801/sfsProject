@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sfs.managecourse.dao.CourseBaseMapper">
+
+    <select id="findCourseListPage" parameterType="com.sfs.framework.domain.course.request.CourseListRequest"
+            resultType="com.sfs.framework.domain.course.ext.CourseInfo">
+        select a.*,(select pic from course_pic where courseid = a.id) pic
+        from course_base a
+        where 1=1
+        <if test="companyId!=null and companyId!=''">
+            and a.company_id = #{companyId}
+        </if>
+    </select>
+
+</mapper>

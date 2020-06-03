@@ -1,0 +1,29 @@
+server:
+  port: 31450
+spring:
+  application:
+    name: sfs-service-manage-media-processor
+  data:
+    mongodb:
+      uri:  mongodb://root:123456@localhost:27017
+      database: sfs_media
+#rabbitmq配置
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+
+sfs-service-manage-media:
+  mq:
+    #视频处理的队列
+    queue-media-video-processor: queue_media_video_processor
+    #视频处理的路由key
+    routingkey-media-video: routingkey_media_video
+
+  #视频文件存放地址
+  video-location: D:/sfs/video/
+  #ffmpag启动程序地址
+  ffmpeg-path: D:/sfs/FFmpeg/ffmpeg-20180227-fa0c9d6-win64-static/bin/ffmpeg.exe

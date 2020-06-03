@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sfs-framework-common/sfs-framework-common.iml" filepath="$PROJECT_DIR$/sfs-framework-common/sfs-framework-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-framework-model/sfs-framework-model.iml" filepath="$PROJECT_DIR$/sfs-framework-model/sfs-framework-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-framework-parent/sfs-framework-parent.iml" filepath="$PROJECT_DIR$/sfs-framework-parent/sfs-framework-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-framework-utils/sfs-framework-utils.iml" filepath="$PROJECT_DIR$/sfs-framework-utils/sfs-framework-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-govern-center/sfs-govern-center.iml" filepath="$PROJECT_DIR$/sfs-govern-center/sfs-govern-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-govern-gateway/sfs-govern-gateway.iml" filepath="$PROJECT_DIR$/sfs-govern-gateway/sfs-govern-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-api/sfs-service-api.iml" filepath="$PROJECT_DIR$/sfs-service-api/sfs-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-base-filesystem/sfs-service-base-filesystem.iml" filepath="$PROJECT_DIR$/sfs-service-base-filesystem/sfs-service-base-filesystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-learning/sfs-service-learning.iml" filepath="$PROJECT_DIR$/sfs-service-learning/sfs-service-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-manage-cms/sfs-service-manage-cms.iml" filepath="$PROJECT_DIR$/sfs-service-manage-cms/sfs-service-manage-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-manage-cms-client/sfs-service-manage-cms-client.iml" filepath="$PROJECT_DIR$/sfs-service-manage-cms-client/sfs-service-manage-cms-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-manage-course/sfs-service-manage-course.iml" filepath="$PROJECT_DIR$/sfs-service-manage-course/sfs-service-manage-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-manage-media/sfs-service-manage-media.iml" filepath="$PROJECT_DIR$/sfs-service-manage-media/sfs-service-manage-media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-manage-media-processor/sfs-service-manage-media-processor.iml" filepath="$PROJECT_DIR$/sfs-service-manage-media-processor/sfs-service-manage-media-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-search/sfs-service-search.iml" filepath="$PROJECT_DIR$/sfs-service-search/sfs-service-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-ucenter/sfs-service-ucenter.iml" filepath="$PROJECT_DIR$/sfs-service-ucenter/sfs-service-ucenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfs-service-ucenter-auth/sfs-service-ucenter-auth.iml" filepath="$PROJECT_DIR$/sfs-service-ucenter-auth/sfs-service-ucenter-auth.iml" />
+    </modules>
+  </component>
+</project>

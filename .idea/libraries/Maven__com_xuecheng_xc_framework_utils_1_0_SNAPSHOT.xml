@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.xuecheng:xc-framework-utils:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/xuecheng/xc-framework-utils/1.0-SNAPSHOT/xc-framework-utils-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/xc-framework-utils/xc-framework-utils-1.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/xuecheng/xc-framework-utils/1.0-SNAPSHOT/xc-framework-utils-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/xc-framework-utils/xc-framework-utils-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/xuecheng/xc-framework-utils/1.0-SNAPSHOT/xc-framework-utils-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

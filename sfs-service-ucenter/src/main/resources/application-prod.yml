@@ -1,0 +1,32 @@
+
+#生产环境
+eureka:
+  client:
+    registerWithEureka: false #服务注册，是否将自己注册到Eureka服务中
+    fetchRegistry: false #服务发现，是否从Eureka中获取注册信息
+    serviceUrl: #Eureka客户端与Eureka服务端的交互地址，高可用状态配置对方的地址，单机状态配置自己（如果不配置则默认本机8761端口）
+      defaultZone: http://116.62.7.195:50101/eureka
+  #      defaultZone: ${EUREKA_SERVER:http://eureka02:50102/eureka/}
+
+  server:
+    enable-self-preservation: false #是否开启自我保护模式
+    eviction-interval-timer-in-ms: 60000 #服务注册表清理间隔（单位毫秒，默认是60*1000）
+#  instance:
+#    hostname: ${EUREKA_DOMAIN:eureka01}
+
+
+spring:
+  datasource:
+    druid:
+      url: ${MYSQL_URL:jdbc:mysql://116.62.7.195:3306/sfs_user?characterEncoding=utf-8}
+      username: root
+      password: 123456
+      driverClassName: com.mysql.jdbc.Driver
+      initialSize: 5  #初始建立连接数量
+      minIdle: 5  #最小连接数量
+      maxActive: 20 #最大连接数量
+      maxWait: 10000  #获取连接最大等待时间，毫秒
+      testOnBorrow: true #申请连接时检测连接是否有效
+      testOnReturn: false #归还连接时检测连接是否有效
+      timeBetweenEvictionRunsMillis: 60000 #配置间隔检测连接是否有效的时间（单位是毫秒）
+      minEvictableIdleTimeMillis: 300000  #连接在连接池的最小生存时间（毫秒）

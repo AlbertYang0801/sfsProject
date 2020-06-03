@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sfs.managecourse.dao.CategoryMapper">
+
+    <!--    查询返回map格式，和实体类对应-->
+    <resultMap id="categoryMap" type="com.sfs.framework.domain.course.ext.CategoryNode">
+        <id column="a_id" property="id"/>
+        <result column="a_name" property="name"/>
+        <result column="a_label" property="label"/>
+        <result column="a_parentid" property="parentid"/>
+        <result column="a_isshow" property="isshow"/>
+        <result column="a_orderby" property="orderby"/>
+        <result column="a_isleaf" property="isleaf"/>
+        <collection property="children" ofType="com.sfs.framework.domain.course.ext.CategoryNode">
+            <id column="b_id" property="id"/>
+            <result column="b_name" property="name"/>
+            <result column="b_label" property="label"/>
+            <result column="b_parentid" property="parentid"/>
+            <result column="b_isshow" property="isshow"/>
+            <result column="b_orderby" property="orderby"/>
+            <result column="b_isleaf" property="isleaf"/>
+            <collection property="children" ofType="com.sfs.framework.domain.course.ext.CategoryNode">
+                <id column="c_id" property="id"/>
+                <result column="c_name" property="name"/>
+                <result column="c_label" property="label"/>
+                <result column="c_parentid" property="parentid"/>
+                <result column="c_isshow" property="isshow"/>
+                <result column="c_orderby" property="orderby"/>
+                <result column="c_isleaf" property="isleaf"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="findCategoryList" parameterType="string" resultMap="categoryMap">
+        select
+            a.id a_id,a.name a_name,a.label a_label,a.isshow a_isshow,a.orderby a_orderby,
+            a.parentid a_parentid,a.isleaf a_isleaf,
+            b.id b_id,b.name b_name,b.label b_label,b.isshow b_isshow,b.orderby b_orderby,
+            b.parentid b_parentid,b.isleaf b_isleaf,
+            c.id c_id,c.name c_name,c.label c_label,c.isshow c_isshow,c.orderby c_orderby,
+            c.parentid c_parentid,c.isleaf c_isleaf
+        from category a
+        left join category b on a.id = b.parentid
+        left join category c on b.id = c.parentid
+        where a.id = '1'
+        order by a.orderby,b.orderby,c.orderby
+    </select>
+
+
+</mapper>

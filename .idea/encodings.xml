@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/sfs-framework-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-framework-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-framework-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-framework-utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-govern-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-govern-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-base-filesystem" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-learning" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-manage-cms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-manage-cms-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-manage-course" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-manage-media" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-manage-media-processor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-ucenter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sfs-service-ucenter-auth" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

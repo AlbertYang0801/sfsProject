@@ -1,0 +1,47 @@
+server:
+  port: ${port:40100}
+spring:
+  application:
+    name: sfs-service-search
+
+#配置elasticsearch的节点
+sfs:
+  elasticsearch:
+    hostlist: ${eshostlist:127.0.0.1:9200} #多个结点中间用逗号分隔
+
+  #课程信息索引
+  course:
+    index: sfs_course #配置课程索引库名称
+    type: doc    #配置es类型名称
+    includes_field:
+      id,name,users,mt,st,grade,studymodel,teachmode,description,pic,
+      timestamp,charge,valid,qq,price,price_old,expires,teachplan,pubTime
+
+  #课程计划媒资索引
+  media:
+    index: sfs_course_media #配置课程计划媒资索引库名称
+    type: doc
+    includes_field:
+      teachplan_id,media_id,media_fileoriginalname,media_url,courseid
+
+
+
+#配置eureka参数   eureka:注册中心
+eureka:
+  client:
+    register-with-eureka: true    #服务注册开关
+    fetch-registry: true        #服务发现开关
+    service-url:
+      defaultZone: http://localhost:50101/eureka/
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true   #将自己的ip注册到eureka服务中
+    instance-id: ${spring.application.name}:${server.port}
+
+#配置ribbon参数   ribbon:负载均衡
+ribbon:
+  MaxAutoRetries: 2 #最大重试次数，当Eureka中可以找到服务，但是服务连不上时将会重试
+  MaxAutoRetriesNextServer: 3 #切换实例的重试次数
+  OkToRetryOnAllOperations: false  #对所有操作请求都进行重试，如果是get则可以，如果是post，put等操作没有实现幂等的情况下是很危险的,所以设置为false
+  ConnectTimeout: 50000 #请求连接的超时时间
+  ReadTimeout: 60000 #请求处理的超时时间

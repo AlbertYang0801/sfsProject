@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sfs.ucenter.dao.SfsMenuMapper">
+
+    <select id="selectPermissionByUserId" parameterType="string" resultType="com.sfs.framework.domain.ucenter.SfsMenu">
+        select
+        id,
+        code,
+        p_id pId,
+        menu_name menuName,
+        url,
+        is_menu isMenu,
+        level,
+        sort
+        sort,
+        status,
+        icon,
+        create_time createTime,
+        update_time updateTime
+        from sfs_menu
+        where id in
+        (select menu_id from sfs_permission where role_id in
+            (select role_id from sfs_user_role where user_id = #{id})
+        )
+    </select>
+
+    <resultMap id="menuMap" type="com.sfs.framework.domain.ucenter.ext.SfsMenuExt">
+        <id column="a_id" property="id"/>
+        <result column="a_name" property="menuName"/>
+        <collection property="children" ofType="com.sfs.framework.domain.course.ext.CategoryNode">
+            <id column="b_id" property="id"/>
+            <result column="b_name" property="label"/>
+            <collection property="children" ofType="com.sfs.framework.domain.course.ext.CategoryNode">
+                <id column="c_id" property="id"/>
+                <result column="c_name" property="label"/>
+                <collection property="children" ofType="com.sfs.framework.domain.course.ext.CategoryNode">
+                    <id column="d_id" property="id"/>
+                    <result column="d_name" property="label"/>
+                </collection>
+            </collection>
+        </collection>
+
+    </resultMap>
+
+    <select id="selectMenuList"  resultMap="menuMap">
+       select
+        a.id a_id,a.menu_name a_name,
+        b.id b_id,b.menu_name b_name,
+        c.id c_id,c.menu_name c_name,
+        d.id d_id,d.menu_name d_name
+
+        from sfs_menu a
+        left join sfs_menu b on a.id = b.p_id
+        left join sfs_menu c on b.id = c.p_id
+        left join sfs_menu d on c.id = d.p_id
+        where a.p_id = '0'
+        ORDER BY a.sort, b.sort,c.sort,d.sort
+    </select>
+
+
+</mapper>

@@ -1,0 +1,32 @@
+#cms系统微服务层的配置
+
+server:
+  port: 31000
+spring:
+  application:
+    name: sfs-service-manage-cms-client
+
+  #连接mongodb数据库
+  data:
+    mongodb:
+      uri: mongodb://root:123456@localhost:27017    #url默认本地端口为27017
+      database: sfs_cms                              #配置连接数据库
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+#配置文件自定义属性
+sfs:
+  mq:
+    #cms消费者的队列、路由key(不同客户端监控的队列不能重复)
+    queue_01: queue_cms_postpage_01
+    #路由key 门户站点id
+    routingKey_01: 5a751fab6abb5044e0d19ea1
+
+    #课程详情消费者队列、路由key
+    queue_02: queue_cms_postcourse_02
+    #路由key 课程详情站点
+    routingKey_02: 5df83e7bc30c831022f69d63
