@@ -6,7 +6,7 @@ import com.sfs.framework.domain.learning.ext.SfsLearningCourseExt;
 import com.sfs.framework.domain.learning.ext.SfsLearningListExt;
 import com.sfs.framework.domain.learning.response.GetMediaResult;
 import com.sfs.framework.model.response.ResponseResult;
-import com.sfs.learning.Client.CourseClient;
+
 import com.sfs.learning.service.CourseLearningService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -92,8 +92,6 @@ public class HlsVideoUtil extends  VideoUtil {
             return outstring;
         }
         return "success";
-
-
     }
 
 
@@ -136,7 +134,6 @@ public class HlsVideoUtil extends  VideoUtil {
             return fileList;
         }
         return null;
-
     }
 
 
