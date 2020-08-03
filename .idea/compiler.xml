@@ -11,6 +11,7 @@
         <module name="sfs-govern-gateway" />
         <module name="sfs-service-manage-course" />
         <module name="sfs-service-search" />
+        <module name="sfs-service-manage-order" />
         <module name="sfs-service-base-filesystem" />
         <module name="sfs-service-learning" />
         <module name="sfs-framework-model" />
@@ -39,6 +40,7 @@
       <module name="sfs-service-manage-course" target="1.8" />
       <module name="sfs-service-manage-media" target="1.8" />
       <module name="sfs-service-manage-media-processor" target="1.8" />
+      <module name="sfs-service-manage-order" target="1.8" />
       <module name="sfs-service-search" target="1.8" />
       <module name="sfs-service-ucenter" target="1.8" />
       <module name="sfs-service-ucenter-auth" target="1.8" />
@@ -62,6 +64,7 @@
       <module name="sfs-service-manage-course" options="-parameters" />
       <module name="sfs-service-manage-media" options="-parameters" />
       <module name="sfs-service-manage-media-processor" options="-parameters" />
+      <module name="sfs-service-manage-order" options="-parameters" />
       <module name="sfs-service-search" options="-parameters" />
       <module name="sfs-service-ucenter" options="-parameters" />
       <module name="sfs-service-ucenter-auth" options="-parameters" />

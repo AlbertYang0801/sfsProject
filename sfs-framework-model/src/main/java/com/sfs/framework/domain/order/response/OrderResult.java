@@ -1,21 +1,22 @@
 package com.sfs.framework.domain.order.response;
 
-import com.sfs.framework.domain.order.XcOrders;
+import com.sfs.framework.domain.order.SfsOrders;
 import com.sfs.framework.model.response.ResponseResult;
 import com.sfs.framework.model.response.ResultCode;
 import lombok.Data;
 import lombok.ToString;
 
 /**
- * Created by mrt on 2018/3/26.
+ * @author yjw on 2018/3/26.
  */
 @Data
 @ToString
 public class OrderResult extends ResponseResult {
-    private XcOrders xcOrders;
-    public OrderResult(ResultCode resultCode, XcOrders xcOrders) {
+    private SfsOrders sfsOrders;
+
+    public OrderResult(ResultCode resultCode, SfsOrders sfsOrders) {
         super(resultCode);
-        this.xcOrders = xcOrders;
+        this.sfsOrders = sfsOrders;
     }
 
 

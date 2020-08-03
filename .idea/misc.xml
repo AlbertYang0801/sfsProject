@@ -38,6 +38,7 @@
         <option value="$PROJECT_DIR$/sfs-service-ucenter-auth/pom.xml" />
         <option value="$PROJECT_DIR$/sfs-service-ucenter/pom.xml" />
         <option value="$PROJECT_DIR$/sfs-govern-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/sfs-service-manage-order/pom.xml" />
       </list>
     </option>
   </component>

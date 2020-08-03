@@ -14,12 +14,13 @@ import java.util.Date;
 @Data
 @ToString
 @Entity
-@Table(name = "xc_task_his")
-@GenericGenerator(name = "jpa-assigned", strategy = "assigned")
-public class XcTaskHis implements Serializable {
+@Table(name = "sfs_task")
+//@GenericGenerator(name = "jpa-assigned", strategy = "assigned")
+@GenericGenerator(name = "jpa-uuid", strategy = "uuid")
+public class SfsTask implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "jpa-assigned")
+    @GeneratedValue(generator = "jpa-uuid")
     @Column(length = 32)
     private String id;
 
@@ -37,6 +38,7 @@ public class XcTaskHis implements Serializable {
     private String mqRoutingkey;
     @Column(name = "request_body")
     private String requestBody;
-    private String version;
+    private Integer version;
     private String status;
+    private String errormsg;
 }
