@@ -25,6 +25,6 @@
 2.  xxxx
 3.  xxxx
 
-[gitee图片](https://images.gitee.com/uploads/images/2021/0130/122507_640aec76_5573516.png)
+![gitee图片](https://images.gitee.com/uploads/images/2021/0130/122507_640aec76_5573516.png)
 
 
