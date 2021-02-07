@@ -55,7 +55,7 @@ ________|  | | /| / / ___   / / ____ ___   __ _  ___    |_______
 
 
 ## 总体设计
-![总体设计图](https://images.gitee.com/uploads/images/2021/0130/132614_f970eebb_5573516.png"总统设计图.png")
+![总体设计图](https://images.gitee.com/uploads/images/2021/0130/132614_f970eebb_5573516.png)
 
 
 ## 技术架构
