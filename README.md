@@ -83,6 +83,21 @@ ________|  | | /| / / ___   / / ____ ___   __ _  ___    |_______
 - nginx-1.14.0
 - FFmpeg-2018
 
+## 环境安装
+
+#### MongoDB安装
+
+- [MongoDB安装步骤](https://blog.csdn.net/qq_40389276/article/details/99629494)
+
+#### FastDFS
+
+- [Centos7.6安装FastDFS步骤及遇到的错误解决](https://blog.csdn.net/qq_40389276/article/details/103069871)
+
+- [FastDFS和nginx整合步骤](https://blog.csdn.net/qq_40389276/article/details/103089394)
+
+- [Centos7.6设置FastDFS和nginx开机自动启动](https://blog.csdn.net/qq_40389276/article/details/103116590)
+
+
 ## 项目启动总结
 >项目采用前后端分类架构，后端采用微服务架构，前端使用vue+webpack，启动不同的模块。
 项目需要启动的其他程序有虚拟机(安装了图片服务器FastDFS，设置了开机自启动)、ElasticSearch相关程序、Nginx。
