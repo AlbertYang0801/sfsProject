@@ -26,7 +26,7 @@ ________|  | | /| / / ___   / / ____ ___   __ _  ___    |_______
     * [后端启动:](#后端启动)
     * [启动虚拟机：](#启动虚拟机：)
     * [ElasticSearch启动:](#elasticsearch启动)
-    * [Nginx启动](#nginx启动)
+    * [nginx启动](#nginx启动)
   * [功能模块](#功能模块)
     * [门户网站](#门户网站)
     * [搜索课程](#搜索课程)
@@ -55,7 +55,7 @@ ________|  | | /| / / ___   / / ____ ___   __ _  ___    |_______
 
 
 ## 总体设计
-![总体设计图](https://images.gitee.com/uploads/images/2021/0130/132614_f970eebb_5573516.png "总统设计图.png")
+![总体设计图](https://images.gitee.com/uploads/images/2021/0130/132614_f970eebb_5573516.png)
 
 
 ## 技术架构
@@ -130,7 +130,7 @@ ________|  | | /| / / ___   / / ____ ___   __ _  ___    |_______
 8. 启动媒资处理工程：sfs-service-manage-media-processor
     - 端口:31450
 
-### 启动虚拟机：
+### 虚拟机启动：
 >虚拟机启CentOS 7.6_SFS里安装FastDFS和Redis，并设置开机自启动。注意下方信息为个人安装虚拟机信息!
 
 - 虚拟机IP:192.168.126.110
@@ -151,7 +151,7 @@ logstash.bat -f ..\config\mysql.conf
 
 可参考：[ES启动总结](https://gitee.com/zztiyjw/sfsProject/wikis/ES%E5%90%AF%E5%8A%A8%E6%80%BB%E7%BB%93?sort_id=3482586)
 
-### Nginx启动
+### nginx启动
 >nginx安装在windows系统，设置自启动。
 
 配置文件内容可见：[nginx配置文件内容](https://gitee.com/zztiyjw/sfsProject/wikis/%E9%A1%B9%E7%9B%AEnginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9?sort_id=3482576)

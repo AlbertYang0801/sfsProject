@@ -44,7 +44,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     }
 
     /**
-     * 定义JJwtAccessTokenConverter，使用jwt令牌
+     * 定义JwtAccessTokenConverter，使用jwt令牌
      * @return
      */
     @Bean
