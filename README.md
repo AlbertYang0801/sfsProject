@@ -200,48 +200,6 @@ logstash.bat -f ..\config\mysql.conf
 
 
 
-#### 媒资管理
-> 媒资管理模块是教学管理中心的一个子模块，主要包含上传文件和我的媒资两个模块。我的媒资模块包括文件查询和文件删除等操作，教学管理员登陆系统后可以进行上传文件和管理媒资文件等操作。
-
-
-**模块地址**
-
-[sfs-service-manage-media](sfs-service-manage-media)
-
-[sfs-service-manage-media-processor](sfs-service-manage-media-processor)
-
-##### 上传文件
----
-![上传文件](https://images.gitee.com/uploads/images/2021/0130/202257_02b8ae44_5573516.png "上传文件.png")
-
-1. 文件断点续传
->上传文件模块实现断点续传将视频文件保存到指定路径，由于上传的文件多是视频文件，文件大小较大，所以采用了断点续传的上传方案来保证系统的高可用。在上传文件开始时将文件分割为多个块文件，分别上传块文件，到所有块文件上传结束合并这些块文件生成和原始一致的文件。如果中途文件上传失败，下次上传时可从上次失败的块文件开始上传，大大的节省系统资源。
-
-代码见：[断点续传代码Controller类](src\main\java\com\sfs\managemedia\controller\MediaUploadController.java)
-
-开发文档见：[视频上传第一步-断点续传开发文档](https://gitee.com/zztiyjw/sfsProject/wikis/pages?sort_id=3482288&doc_id=1219120)
-
-
-2. 文件处理
->由于页面流媒体播放协议选用了HLS协议，所以还需要将上传后的视频文件进行处理，将视频文件转换成m3u8格式的视频文件，实现视频的边下载边播放。
-
-代码见：[媒资处理mq消费者类](src\main\java\com\sfs\mediaprocess\mq\MediaProcessTask.java)
-
-开发文档见：[视频上传第二步-文件处理开发文档](https://gitee.com/zztiyjw/sfsProject/wikis/pages?sort_id=3482289&doc_id=1219120)
-
-
-##### 我的媒资
----
-> 我的媒资可以对上传后的媒资信息进行管理，可查询媒资文件，删除媒资文件。删除媒资文件只删除数据库里的媒资数据，不删除本地媒资文件。
-
-
-![我的媒资](https://images.gitee.com/uploads/images/2021/0130/202311_218af0fa_5573516.png "我的媒资.png")
-
-
-代码见：[我的媒资Controller类](src\main\java\com\sfs\managemedia\controller\MediaFileController.java)
-
-
-
 ### 系统管理中心
 >系统管理员是系统管理中心重要的参与者，主要是对系统的用户信息、管理员信息和前台页面信息进行管理，系统管理员还负责对数据库数据以及前台相关的数据信息进行管理。
 
