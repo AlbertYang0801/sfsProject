@@ -73,56 +73,63 @@ ________|  | | /| / / ___   / / ____ ___   __ _  ___    |_______
 项目需要启动的其他程序有虚拟机(安装了图片服务器FastDFS，设置了开机自启动)、ElasticSearch相关程序、Nginx。
 
 ### 前端
-1. 启动动态门户-搜索工程：sfs-ui-pc-teach-dev
-    - 端口:10000
-2. 启动系统管理中心工程：sfs-ui-pc-sysmanage-dev 
-    - 端口:11000
-3. 启动教学管理中心工程：sfs-ui-pc-teach-dev
-    - 端口:12000
-4. 启动学习中心工程：sfs-ui-pc-teach-dev
-    - 端口:13000
+1. 启动动态门户-搜索工程：`sfs-ui-pc-teach-dev`
+    - 端口:`10000`
+2. 启动系统管理中心工程：`sfs-ui-pc-sysmanage-dev `
+    - 端口:`11000`
+3. 启动教学管理中心工程：`sfs-ui-pc-teach-dev`
+    - 端口:`12000`
+4. 启动学习中心工程：`sfs-ui-pc-teach-dev`
+    - 端口:`13000`
 
 ### 后端
-1. 启动注册中心工程：sfs-govern-center
-    - 端口:50101
-2. 启动cms服务工程：sfs-service-manage-cms
-    - 端口:31001
-3. 启动cms消费者工程：sfs-service-manage-cms-client
+1. 启动注册中心工程：`sfs-govern-center`
+    - 端口:`50101`
+2. 启动cms服务工程：`sfs-service-manage-cms`
+    - 端口:`31001`
+3. 启动cms消费者工程：`sfs-service-manage-cms-client`
     - 端口:31000
-4. 启动文件系统工程：sfs-service-base-filesystem
-    - 端口:22100
-5. 启动课程管理工程：sfs-service-manage-course
-    - 端口:31200
-6. 启动搜索工程：sfs-service-search
-    - 端口:40100
-7. 启动媒资工程：sfs-service-manage-media
-    - 端口:31400
-8. 启动媒资处理工程：sfs-service-manage-media-processor
-    - 端口:31450
+4. 启动文件系统工程：`sfs-service-base-filesystem`
+    - 端口:`22100`
+5. 启动课程管理工程：`sfs-service-manage-course`
+    - 端口:`31200`
+6. 启动搜索工程：`sfs-service-search`
+    - 端口:`40100`
+7. 启动媒资工程：`sfs-service-manage-media`
+    - 端口:`31400`
+8. 启动媒资处理工程：`sfs-service-manage-media-processor`
+    - 端口:`31450`
 
 ### 虚拟机
->虚拟机启CentOS 7.6_SFS里安装FastDFS和Redis，并设置开机自启动。注意下方信息为个人安装虚拟机信息!
+虚拟机`CentOS 7.6_SFS`里安装`FastDFS`和`Redis`，并设置开机自启动。注意下方信息为个人安装虚拟机信息!
 
-- 虚拟机IP:192.168.126.110
-- 用户名:root	
-- 密码:123456
+- 虚拟机IP:`192.168.126.110`
+- 用户名:`root`
+- 密码:`123456`
 
 
 FastDFS安装和设置开机自启动参考博客地址：[FastDFS图片服务器安装步骤及遇到的问题博客目录](https://blog.csdn.net/qq_40389276/category_9515622.html)
 
 
 ### ElasticSearch
-1.启动ElasticSearch
-2.启动head插件
-3.启动logstash，输入命令: 
-```
-logstash.bat -f ..\config\mysql.conf
-```
+1. 启动`elasticsearch-6.2.1\bin\elasticsearch.bat`
+2. 访问`localhost:9200`，出现配置信息则启动成功
+3. 启动`es可视化head插件`，进入`elasticsearch-head`目录，
+	进入`cmd`窗口，运行` npm run start `命令
+4. 访问`localhost:9100`，出现可视化界面则启动成功
 
-可参考：[ES启动总结](https://gitee.com/zztiyjw/sfsProject/wikis/ES%E5%90%AF%E5%8A%A8%E6%80%BB%E7%BB%93?sort_id=3482586)
+5. 启动`logstash`,进入`cmd`，运行命令:
+    - 导入课程索引:
+    ``` 
+    logstash.bat -f ..\config\mysql.conf
+    ```
+    - 导入课程计划媒资信息索引:
+     ```
+    logstash.bat -f ..\config\mysql_course_media.conf
+     ```
 
 ### nginx
->nginx安装在windows系统，设置自启动。
+`nginx`安装在`windows系统`，设置自启动。
 
 
 
